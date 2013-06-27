@@ -37,9 +37,14 @@ public class CelsiusConverter extends JFrame {
 
 	
 	private void convertButtonPressed(){
-		int tempFahr = (int)((Double.parseDouble(celsiusField.getText()))
+		try{
+			int tempFahr = (int)((Double.parseDouble(celsiusField.getText()))
 	            * 1.8 + 32);
-		fahrenheitField.setText(tempFahr+"");
+			fahrenheitField.setText(tempFahr+"");
+		}catch(Exception e){
+			fahrenheitField.setText("Please enter a number!");
+		}
+		
 	}
 	/**
 	 * Create the frame.
