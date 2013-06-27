@@ -74,7 +74,7 @@ public class CelsiusConverter extends JFrame {
 		fahrenheitField = new JTextField();
 		fahrenheitField.setEditable(false);
 		fahrenheitField.setColumns(10);
-		fahrenheitField.setBounds(80, 46, 90, 20);
+		fahrenheitField.setBounds(80, 46, 189, 20);
 		contentPane.add(fahrenheitField);
 		
 		JButton btnConvert = new JButton("Convert");
