@@ -1,16 +1,16 @@
 package start;
 
-import java.awt.BorderLayout;
+import java.awt.Cursor;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 public class CelsiusConverter extends JFrame {
 
@@ -78,6 +78,7 @@ public class CelsiusConverter extends JFrame {
 		contentPane.add(fahrenheitField);
 		
 		JButton btnConvert = new JButton("Convert");
+		btnConvert.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		btnConvert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				convertButtonPressed();
