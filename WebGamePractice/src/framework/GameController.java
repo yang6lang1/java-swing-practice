@@ -1,26 +1,37 @@
-package game;
+package framework;
 
-import test.GameControllerTest;
+import game.BuildConfig;
+import interfaces.IGamePanel;
 
 public class GameController implements Runnable {
 
   public static final int DefaultFPS = 60;
 
-  private GameControllerTest game;
-
+  private IGamePanel panel;
+  private BuildConfig game; //TODO change class name later
+  private GameModel model;
+  
   private Thread animator;
   private boolean running;
   private boolean paused;
   private int fps;
   private int frameCount;
 
-  public GameController(GameControllerTest game){
+  public GameController(IGamePanel panel, BuildConfig game, GameModel model){
 	this.game = game;
+	this.panel = panel;
+	this.model = model;
 	this.animator = new Thread(this, "Blockadia");
 	this.running = false;
 	this.paused = false;
 	this.fps = DefaultFPS;
 	this.frameCount = 0;
+	
+	addListeners();	
+  }
+
+  private void addListeners() {
+	
   }
 
   public synchronized void start() {

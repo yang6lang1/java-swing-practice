@@ -1,6 +1,6 @@
 package test;
 
-import game.GameController;
+import framework.GameController;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -36,7 +36,7 @@ public class GameControllerTest extends Canvas{
   }
 
   public void init(){
-	System.out.println("init");
+	//System.out.println("init");
   }
 
   public void update(){
