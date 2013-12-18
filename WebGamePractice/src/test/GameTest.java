@@ -57,7 +57,8 @@ public class GameTest extends GameComponent {
 
 		// create some random circles
 		for(int i=0; i<circles.length; i++) {
-			Color color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256),random.nextInt(256));
+			//Color color = new Color(random.nextInt(256),random.nextInt(256),random.nextInt(256),random.nextInt(256));
+		  	Color color = new Color(Color.yellow.getRed(), Color.yellow.getGreen(), Color.yellow.getBlue(), 125);
 			int radius = random.nextInt(100) + 30;
 			int x = random.nextInt(800-radius);
 			int y = random.nextInt(600-radius);
